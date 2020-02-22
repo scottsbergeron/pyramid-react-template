@@ -6,7 +6,6 @@ from setuptools import (
 requires = [
     'gunicorn[gevent]',
     'mysqlclient',
-    'pylibmc',
     'pyramid',
     'SQLAlchemy'
 ]
