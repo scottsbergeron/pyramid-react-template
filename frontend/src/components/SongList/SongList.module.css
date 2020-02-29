@@ -1,0 +1,11 @@
+.SongList {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    .SongList {
+        width: 80%;
+    }
+}

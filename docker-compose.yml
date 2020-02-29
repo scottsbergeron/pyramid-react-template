@@ -26,6 +26,19 @@ services:
     volumes:
       - ./backend:/usr/src/app
 
+  node:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    command: ./startup.sh
+    depends_on:
+      - pyramid
+    ports:
+      - 3000:3000
+    working_dir: /usr/src/app
+    volumes:
+      - ./frontend:/usr/src/app
+
 networks:
   default:
     external:

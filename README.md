@@ -30,6 +30,7 @@ The password is `example` and is configured in the `backend/docker-compose.yml` 
 Add execute permissions to the startup.sh file
 ```
 chmod +x backend/startup.sh
+chmod +x frontend/startup.sh
 ```
 
 ## Without Docker
@@ -77,4 +78,20 @@ pserve backend/development.ini --reload
 #### Database
 Update the connection values in `backend/development.ini` to point to your external MySQL instance.
 
-Run the sequel statements in `backend/SCHEMA.sql` against the MySQL instance. 
+Run the sequel statements in `backend/SCHEMA.sql` against the MySQL instance.
+
+### Frontend
+#### Requirements
+Install Node.js https://nodejs.org/en/download/
+
+#### Install dependencies
+```
+cd frontend
+npm install
+```
+
+#### Run the app
+```
+cd frontend # If you're not already in /frontend
+npm start
+```
