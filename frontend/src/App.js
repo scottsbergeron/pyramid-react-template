@@ -1,12 +1,17 @@
 import React from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 import Layout from "./components/Layout/Layout";
 import Library from "./containers/Library/Library";
+import Editor from "./containers/Editor/Editor";
 
 const App = () => {
     return (
-        <Layout>
-            <Library />
-        </Layout>
+        <BrowserRouter>
+            <Layout>
+                <Route path="/" exact component={Library} />
+                <Route path="/edit" exact component={Editor} />
+            </Layout>
+        </BrowserRouter>
     );
 };
 

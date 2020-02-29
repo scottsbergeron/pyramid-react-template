@@ -1,6 +1,13 @@
 import React from "react";
+import Button from "../../../Button/Button";
 
 const Song = (props) => {
+    const btnStyle = {
+        color: "#fff",
+        borderColor: "red",
+        backgroundColor: "red"
+    };
+
     return (
         <tr>
             <td>{props.song.id}</td>
@@ -9,7 +16,9 @@ const Song = (props) => {
             <td>{props.song.genre}</td>
             <td>{props.song.date_created}</td>
             <td>
-                <button onClick={props.delete}>Delete</button>
+                <Button
+                    style={btnStyle}
+                    onClick={props.delete}>Delete</Button>
             </td>
         </tr>
     )

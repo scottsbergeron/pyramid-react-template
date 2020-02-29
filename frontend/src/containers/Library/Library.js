@@ -34,7 +34,7 @@ class Library extends Component {
     render() {
         return (
             <SongList songs={this.state.songs} deleteSong={this.deleteSong}/>
-        )
+        );
     }
 }
 

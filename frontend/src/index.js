@@ -7,11 +7,6 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:7777/api/v1/';
 
-axios.interceptors.request.use(request => {
-    console.log(request.baseURL);
-    return request;
-});
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
