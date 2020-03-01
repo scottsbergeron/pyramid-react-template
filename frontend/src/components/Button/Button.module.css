@@ -2,16 +2,18 @@
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
+    margin: 5px;
+    color: black;
+    border-color: gray;
+    background-color: gray;
 }
 
 .ButtonBig {
-    margin: 10px;
     padding: 10px;
     border-radius: 10px;
 }
 
 .ButtonMedium {
-    margin: 5px;
     padding: 5px;
     border-radius: 5px;
 }

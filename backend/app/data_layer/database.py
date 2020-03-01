@@ -1,3 +1,4 @@
+from contextlib import contextmanager
 from MySQLdb.constants import CLIENT
 from sqlalchemy import create_engine
 from sqlalchemy.orm import (
@@ -17,8 +18,23 @@ pool = None
 
 
 def create_session():
+    """
+    :rtype: sqlalchemy.orm.session.Session
+    """
     engine = create_engine('mysql+mysqldb://', pool=pool)
     return scoped_session(sessionmaker(bind=engine, expire_on_commit=False))()
+
+
+@contextmanager
+def use_session():
+    """
+    :rtype: sqlalchemy.orm.session.Session
+    """
+    session = create_session()
+    try:
+        yield session
+    finally:
+        session.close()
 
 
 def includeme(config):

@@ -1,0 +1,26 @@
+.SongForm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.SongFormInput {
+    line-height: 1.2;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.SongFormLabel {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 31px;
+    padding-bottom: 9px;
+}

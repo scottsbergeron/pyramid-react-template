@@ -1,0 +1,11 @@
+.SongEditor {
+    width: 350px;
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .SongEditor {
+        width: 80%;
+    }
+}
