@@ -1,6 +1,9 @@
 # pyramid-react-template
 A starting off point for a web application that uses Pyramid in the back-end and React in the frontend
 
+- [Setting up your environment](#setting-up-your-environment)
+- [Using the demo application](#using-the-demo-application)
+
 # Setting up your environment
 ## With Docker
 Install the Docker Engine https://docs.docker.com/install/
@@ -94,4 +97,72 @@ npm install
 ```
 cd frontend # If you're not already in /frontend
 npm start
+```
+
+# Using the demo Application
+## MySQL (Database)
+Network:
+```
+External
+host: localhost
+port: 3306
+username: root
+password: example
+
+Docker Network
+host: database
+port: 3306
+username: root
+password: example
+```
+
+## Pyramid (Backend API)
+Network:
+```
+External
+host: localhost
+port: 7777
+
+Docker Network
+host: pyramid
+port: 7777
+```
+
+Endpoints:
+```
+GET    /api/v1/songs  # Returns a list of song objects
+POST   /api/v1/songs  # Creates a song object
+GET    /api/v1/songs/:id  # Returns a song object
+PUT    /api/v1/songs/:id  # Replaces a song object
+DELETE /api/v1/songs/:id  # Deletes a song object
+```
+
+Song Model:
+```
+{
+    "id": integer,
+    "name": string,
+    "artist": string,
+    "genre": string,
+    "date_created": string
+}
+```
+
+## Node (Frontend Application)
+Network:
+```
+External
+host: localhost
+port: 3000
+
+Docker Network
+host: node
+port: 3000
+```
+
+Endpoints:
+```
+/          # List of songs
+/edit      # Add a song
+/edit/:id  # Update a song
 ```
