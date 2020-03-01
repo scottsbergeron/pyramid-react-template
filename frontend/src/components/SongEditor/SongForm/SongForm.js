@@ -10,6 +10,7 @@ const SongForm = (props) => {
                 name="name"
                 type="text"
                 value={props.song.name}
+                maxLength="50"
                 onChange={(event) => props.modifySong("name", event.target.value)}/>
             <div className={classes.SongFormLabel}>Artist</div>
             <input
@@ -17,6 +18,7 @@ const SongForm = (props) => {
                 name="artist"
                 type="text"
                 value={props.song.artist}
+                maxLength="50"
                 onChange={(event) => props.modifySong("artist", event.target.value)}/>
             <div className={classes.SongFormLabel}>Genre</div>
             <input
@@ -24,6 +26,7 @@ const SongForm = (props) => {
                 name="genre"
                 type="text"
                 value={props.song.genre}
+                maxLength="20"
                 onChange={(event) => props.modifySong("genre", event.target.value)}/>
         </form>
     );

@@ -10,6 +10,7 @@ const App = () => {
             <Layout>
                 <Route path="/" exact component={Library} />
                 <Route path="/edit" exact component={Editor} />
+                <Route path="/edit/:id" exact component={Editor} />
             </Layout>
         </BrowserRouter>
     );

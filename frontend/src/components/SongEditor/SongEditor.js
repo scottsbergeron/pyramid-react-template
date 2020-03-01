@@ -7,7 +7,7 @@ const SongEditor = (props) => {
     return (
         <div className={classes.SongEditor}>
             <SongForm song={props.song} modifySong={props.modifySong}/>
-            <SongControls song={props.song} addSong={props.addSong}/>
+            <SongControls song={props.song} submitSong={props.submitSong}/>
         </div>
     );
 };

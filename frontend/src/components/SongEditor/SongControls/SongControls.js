@@ -17,7 +17,7 @@ const SongControls = (props) => {
     return (
         <div className={classes.SongControls}>
             <Button size="big" link="/">Cancel</Button>
-            <Button style={submitStyle} size="big" onClick={() => props.addSong()}>{submitLbl}</Button>
+            <Button style={submitStyle} size="big" onClick={() => props.submitSong()}>{submitLbl}</Button>
         </div>
     );
 };
